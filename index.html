@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sahbhag — Jharkhand Innovation Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <nav class="nav">
+      <div class="brand">
+        <img src="/Jan-Sahbhag/government-of-jharkhand-logo.jpg" width="70" alt="GOVERNMENT OF JHARKHAND">
+        <img src="/Jan-Sahbhag/JAN-सहभाग-LOGO.png" width="90" alt="logo">
+        <img src="/Jan-Sahbhag/JAN-सहभाग-NAME.png" width="250" alt="JAN SAHBHAG">
+      </div>
+
+      <div class="navlinks">
+        <a href="#challenges">Explore challenges</a>
+        <a href="#projects">Projects</a>
+        <a href="#partners">Partners</a>
+        <a href="#updates">Insights</a>
+        <button class="btn" id="loginBtn" onclick="openLogin()">Sign in</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">
+            Jharkhand Societal Innovation Collaboration Portal
+          </div>
+          <h1>Local problems. Shared expertise. Lasting impact.</h1>
+          <p>
+            Bring community challenges to universities, innovators, industry
+            partners and government — and see solutions move from field insight
+            to deployment.
+          </p>
+        </div>
+
+        <div class="actions">
+          <button class="btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+            View projects
+          </button>
+          <button class="btn primary" onclick="openModal()">
+            Submit a challenge
+          </button>
+        </div>
+      </section>
+
+      <div class="overview" id="challenges">
+        <section class="panel">
+          <div class="sectionhead">
+            <div>
+              <h2>Challenges needing attention</h2>
+              <div class="sub">
+                Validated submissions matched by theme and location
+              </div>
+            </div>
+            <span class="link">Browse all →</span>
+          </div>
+
+          <article class="challenge">
+            <span class="stripe"></span>
+            <div>
+              <h3>Solar drying for lac growers</h3>
+              <p>
+                <span class="tag">Agriculture</span>
+                Khunti · Submitted by Kisko Producer Group
+              </p>
+            </div>
+            <span class="state">Review</span>
+          </article>
+
+          <article class="challenge">
+            <span class="stripe water"></span>
+            <div>
+              <h3>Safe water access during summer months</h3>
+              <p>
+                <span class="tag">Water</span>
+                Palamu · Submitted by Gram Sabha, Satbarwa
+              </p>
+            </div>
+            <span class="state">Routing</span>
+          </article>
+
+          <article class="challenge">
+            <span class="stripe health"></span>
+            <div>
+              <h3>Maternal health referral access in remote villages</h3>
+              <p>
+                <span class="tag">Healthcare</span>
+                West Singhbhum · Submitted by ASHA network
+              </p>
+            </div>
+            <span class="state">Review</span>
+          </article>
+        </section>
+
+        <aside class="panel">
+          <h2>Impact at a glance</h2>
+          <div class="sub">This financial year</div>
+
+          <div class="metrics">
+            <div class="metric">
+              <strong>1,286</strong>
+              <span>Challenges received</span>
+            </div>
+            <div class="metric">
+              <strong>94</strong>
+              <span>Active projects</span>
+            </div>
+            <div class="metric">
+              <strong>38</strong>
+              <span>Participating HEIs</span>
+            </div>
+            <div class="metric">
+              <strong>61</strong>
+              <span>Industry partners</span>
+            </div>
+          </div>
+
+          <div class="districts">
+            <div class="sectionhead">
+              <strong class="small-heading">Submissions by district</strong>
+              <span class="link">Details</span>
+            </div>
+
+            <div class="barrow">
+              <span>Ranchi</span>
+              <div class="bar"><div class="fill fill-86"></div></div>
+              <b>218</b>
+            </div>
+
+            <div class="barrow">
+              <span>Dhanbad</span>
+              <div class="bar"><div class="fill fill-62"></div></div>
+              <b>157</b>
+            </div>
+
+            <div class="barrow">
+              <span>Palamu</span>
+              <div class="bar"><div class="fill fill-48"></div></div>
+              <b>124</b>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="projects panel" id="projects">
+        <div class="sectionhead">
+          <div>
+            <h2>Solutions in motion</h2>
+            <div class="sub">
+              Collaborative projects currently working with communities
+            </div>
+          </div>
+          <span class="link">Project directory →</span>
+        </div>
+
+        <div class="projectgrid">
+          <article class="project">
+            <span class="tag">Water management</span>
+            <h3>Smart village water-point monitoring</h3>
+            <p>BIT Mesra + Jamshedpur Utilities</p>
+            <div class="progresslabel">
+              <span>Prototype testing</span>
+              <span>72%</span>
+            </div>
+            <div class="progress"><i class="progress-72"></i></div>
+          </article>
+
+          <article class="project">
+            <span class="tag">Rural livelihoods</span>
+            <h3>Tussar silk quality traceability</h3>
+            <p>IIT (ISM) Dhanbad + Tribal Cooperative</p>
+            <div class="progresslabel">
+              <span>Field validation</span>
+              <span>48%</span>
+            </div>
+            <div class="progress"><i class="progress-48"></i></div>
+          </article>
+
+          <article class="project">
+            <span class="tag">Accessibility</span>
+            <h3>Inclusive bus-stop wayfinding</h3>
+            <p>NIFFT + Ranchi Smart City</p>
+            <div class="progresslabel">
+              <span>Design sprint</span>
+              <span>31%</span>
+            </div>
+            <div class="progress"><i class="progress-31"></i></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="collab" id="partners">
+        <div class="panel" id="updates">
+          <div class="sectionhead">
+            <div>
+              <h2>Public progress updates</h2>
+              <div class="sub">
+                Visible to the community from assignment through deployment
+              </div>
+            </div>
+            <span class="tag">JH-2026-1129</span>
+          </div>
+
+          <div id="updatesList">
+            <div class="update">
+              <i class="dot"></i>
+              <div>
+                <strong>Field pilot started in Satbarwa</strong>
+                <span>
+                  18 Aug · Community water committee is testing the first two
+                  sensors.
+                </span>
+              </div>
+            </div>
+
+            <div class="update">
+              <i class="dot"></i>
+              <div>
+                <strong>Solution design approved</strong>
+                <span>
+                  02 Aug · Palamu district administration joined as
+                  implementation partner.
+                </span>
+              </div>
+            </div>
+
+            <div class="update">
+              <i class="dot"></i>
+              <div>
+                <strong>Challenge accepted by BIT Mesra</strong>
+                <span>
+                  24 Jul · Faculty and student team formed with local
+                  volunteers.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="claim">
+          <span class="tag">For institutions &amp; partners</span>
+          <h3>Can your organisation help solve a challenge?</h3>
+          <p>
+            HEIs, government bodies and NGOs can propose an approach, nominate
+            a team and publish verified progress updates for citizens to follow.
+          </p>
+          <button class="btn primary" onclick="openPartnerModal()">
+            Offer a solution
+          </button>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <!-- Challenge form -->
+  <div class="modalback" id="modalback" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button class="close" onclick="closeModal()">×</button>
+      <h2>Tell us what needs to change</h2>
+      <div class="sub">
+        Your submission will be reviewed and matched to the right institution or
+        partner.
+      </div>
+
+      <form onsubmit="submitChallenge(event)">
+        <div class="formgrid">
+          <label class="field full">
+            What is the challenge?
+            <textarea
+              id="challengeText"
+              required
+              placeholder="Describe the issue, who it affects, and what you have observed…"
+              oninput="classify()"
+            ></textarea>
+          </label>
+
+          <label class="field">
+            District
+            <select>
+              <option>Choose district</option>
+              <option>Ranchi</option>
+              <option>Khunti</option>
+              <option>Palamu</option>
+              <option>West Singhbhum</option>
+            </select>
+          </label>
+
+          <label class="field">
+            Your role
+            <select>
+              <option>Citizen / community member</option>
+              <option>Local body representative</option>
+              <option>Government department</option>
+              <option>Community organisation</option>
+            </select>
+          </label>
+
+          <label class="field full">
+            <span>
+              Photos of the challenge
+              <span class="filehelp">(optional, up to 4)</span>
+            </span>
+            <span class="photo-label">
+              Add photos
+              <input
+                id="photos"
+                type="file"
+                accept="image/*"
+                multiple
+                onchange="previewPhotos(this)"
+              >
+            </span>
+            <span class="attachments" id="attachments"></span>
+          </label>
+
+          <label class="field full">
+            Contact number (optional)
+            <input type="tel" placeholder="For a reviewer to follow up">
+          </label>
+        </div>
+
+        <div class="aihint" id="aihint"></div>
+
+        <div class="submitline">
+          <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+          <button class="btn primary">Submit challenge</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Partner solution form -->
+  <div class="modalback" id="partnerback" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button class="close" onclick="closePartnerModal()">×</button>
+      <h2>Offer a solution</h2>
+      <div class="sub">
+        Your proposal will be assessed before your organisation is shown as a
+        project partner.
+      </div>
+
+      <form onsubmit="submitOffer(event)">
+        <div class="formgrid">
+          <label class="field">
+            Organisation type
+            <select>
+              <option>Higher education institution</option>
+              <option>Government body</option>
+              <option>NGO / community organisation</option>
+            </select>
+          </label>
+
+          <label class="field">
+            Organisation name
+            <input required placeholder="e.g. BIT Mesra">
+          </label>
+
+          <label class="field full">
+            How can you help?
+            <textarea
+              required
+              placeholder="Describe your solution approach, expertise, resources and community role…"
+            ></textarea>
+          </label>
+
+          <label class="field full">
+            First public update
+            <textarea
+              id="firstUpdate"
+              required
+              placeholder="Share what residents can expect next…"
+            ></textarea>
+          </label>
+        </div>
+
+        <div class="submitline">
+          <button type="button" class="btn" onclick="closePartnerModal()">
+            Cancel
+          </button>
+          <button class="btn primary">Send proposal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Organisation sign in -->
+  <div class="modalback" id="loginback" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button class="close" onclick="closeLogin()">×</button>
+      <h2>Sign in as an organisation</h2>
+      <div class="sub">
+        Organisation accounts are verified before they can propose solutions or
+        publish public project updates.
+      </div>
+
+      <form onsubmit="signIn(event)">
+        <div class="formgrid">
+          <label class="field full">
+            Account type
+            <select id="accountType" onchange="updateVerification()">
+              <option value="HEI">Higher education institution</option>
+              <option value="Government">Government body</option>
+              <option value="NGO">NGO / civil society organisation</option>
+            </select>
+          </label>
+
+          <label class="field full">
+            Official email address
+            <input
+              id="officialEmail"
+              type="email"
+              required
+              placeholder="name@institution.edu.in"
+            >
+          </label>
+
+          <label class="field full">
+            Password
+            <input type="password" required placeholder="Enter your password">
+          </label>
+        </div>
+
+        <div class="aihint show" id="verificationNote">
+          Verification required: institutional email domain and designated
+          faculty / innovation-cell authorisation.
+        </div>
+
+        <div class="submitline">
+          <button type="button" class="btn" onclick="closeLogin()">Cancel</button>
+          <button class="btn primary">Sign in securely</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
