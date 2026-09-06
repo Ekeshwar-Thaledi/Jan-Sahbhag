@@ -10,9 +10,9 @@
   <main class="app">
     <nav class="nav">
       <div class="brand">
-        <img src="/Jan-Sahbhag/government-of-jharkhand-logo.jpg" width="70" alt="GOVERNMENT OF JHARKHAND">
-        <img src="/Jan-Sahbhag/JAN-सहभाग-LOGO.png" width="90" alt="logo">
-        <img src="/Jan-Sahbhag/JAN-सहभाग-NAME.png" width="250" alt="JAN SAHBHAG">
+        <img class="brandmark" src="images/government-of-jharkhand-logo.jpg" alt="GOVERNMENT OF JHARKHAND">
+        <img class="brandmark" src="images/jan-sahbhag-logo.png" alt="">
+        <img class="brandname" src="images/jan-sahbhag-name.png" alt="JAN SAHBHAG">
       </div>
 
       <div class="navlinks">
@@ -57,7 +57,9 @@
                 Validated submissions matched by theme and location
               </div>
             </div>
-            <span class="link">Browse all →</span>
+            <button class="btn" onclick="openBrowseModal()">
+              Browse all
+            </button>
           </div>
 
           <article class="challenge">
@@ -123,7 +125,7 @@
           <div class="districts">
             <div class="sectionhead">
               <strong class="small-heading">Submissions by district</strong>
-              <span class="link">Details</span>
+              <button class="linkbtn" id="districtToggle" onclick="toggleDistrictDetails()">Details</button>
             </div>
 
             <div class="barrow">
@@ -143,6 +145,26 @@
               <div class="bar"><div class="fill fill-48"></div></div>
               <b>124</b>
             </div>
+
+            <div class="extradistricts" id="extraDistricts">
+              <div class="barrow">
+                <span>Khunti</span>
+                <div class="bar"><div class="fill fill-33"></div></div>
+                <b>84</b>
+              </div>
+
+              <div class="barrow">
+                <span>West Singhbhum</span>
+                <div class="bar"><div class="fill fill-29"></div></div>
+                <b>76</b>
+              </div>
+
+              <div class="barrow">
+                <span>Others</span>
+                <div class="bar"><div class="fill fill-25"></div></div>
+                <b>63</b>
+              </div>
+            </div>
           </div>
         </aside>
       </div>
@@ -155,7 +177,7 @@
               Collaborative projects currently working with communities
             </div>
           </div>
-          <span class="link">Project directory →</span>
+          <button class="linkbtn" onclick="openDirectoryModal()">Project directory →</button>
         </div>
 
         <div class="projectgrid">
@@ -435,6 +457,65 @@
           <button class="btn primary">Sign in securely</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Browse all challenges -->
+  <div class="modalback" id="browseback" role="dialog" aria-modal="true">
+    <div class="modal wide">
+      <button class="close" onclick="closeBrowseModal()">×</button>
+      <h2>All challenges</h2>
+      <div class="sub">
+        Every validated submission, filterable by district.
+      </div>
+
+      <div class="filterrow">
+        <label class="field">
+          Filter by district
+          <select id="browseFilter" onchange="renderBrowseList()">
+            <option value="">All districts</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="browseList" class="scrolllist"></div>
+
+      <div class="submitline">
+        <button type="button" class="btn" onclick="closeBrowseModal()">Close</button>
+        <button
+          type="button"
+          class="btn primary"
+          onclick="closeBrowseModal(); openModal();"
+        >
+          Submit a new challenge
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project directory -->
+  <div class="modalback" id="directoryback" role="dialog" aria-modal="true">
+    <div class="modal wide">
+      <button class="close" onclick="closeDirectoryModal()">×</button>
+      <h2>Project directory</h2>
+      <div class="sub">
+        Every collaborative project, filterable by theme.
+      </div>
+
+      <div class="filterrow">
+        <label class="field">
+          Filter by theme
+          <select id="directoryFilter" onchange="renderDirectoryList()">
+            <option value="">All themes</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="directoryList" class="scrolllist projectgrid"></div>
+
+      <div class="submitline">
+        <button type="button" class="btn" onclick="closeDirectoryModal()">Close</button>
+      </div>
     </div>
   </div>
 
